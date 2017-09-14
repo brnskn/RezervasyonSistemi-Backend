@@ -1,0 +1,18 @@
+Projenin çalýþmasý için,
+
+VERÝTABANI AYARLARI
+1-SQL Server kurulu olmalýdýr.
+2-Microsoft SQL Server Management Studio'dan Databases sað týklayýn ve Restore Database'i seçin.
+3-RezervasyonSistemi.bak dosyasýný Device alanýndan gösterin.
+5-OK butonuna basýn.
+
+SERVER AYARLARI
+1-"Proje Kodlarý/RezervasyonSistemi" yolundaki API projesini Visual Studio ile açýn.
+2-"Proje Kodlarý/RezervasyonSistemi/RezervasyonSistemi/Web.config" dosyasýný açýn ve connectionString içerisindeki Data Source kýsmýný kendi Server Name'niz ile deðiþtirin ve kaydedin.
+3-Projeyi  Visual Studio üzerinden Publish edin.
+4-IIS üzerinden yeni bir Web Site oluþturun ve seçtiðiniz port ile birlikte sitenin adresini not alýn.
+
+CLIENT AYARLARI
+1-"Proje Kodlarý/RezervasyonSistemiClient" yolundaki Windows Form projesini Visual Studio ile açýn.
+2-"Proje Kodlarý/RezervasyonSistemiClient/RezervasyonSistemiClient/System/Constants.cs" yolundaki sýnýf dosyasýný açýn ve URL deðiþkenin adýný not aldýðýnýz web sitesinin adresi ile deðiþtirin.
+3-Projeyi build edin.
