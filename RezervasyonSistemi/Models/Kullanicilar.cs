@@ -20,6 +20,7 @@ namespace RezervasyonSistemi.Models
         public string KullaniciAdi { get; set; }
         [JsonIgnore]
         public string Sifre { get; set; }
+        [JsonIgnore]
         public Nullable<System.DateTime> OlusturmaTarihi { get; set; }
         public Nullable<bool> KullaniciTipi { get; set; }
         [JsonIgnore]

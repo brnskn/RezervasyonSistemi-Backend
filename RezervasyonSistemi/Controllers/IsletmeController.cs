@@ -11,7 +11,7 @@ using System.Web.Http;
 namespace RezervasyonSistemi.Controllers
 {
     /// <summary>  
-    ///  Kullanıcının işletme bilgilerini düzenler.
+    ///  Kullanıcının işletme bilgileri ile ilgili işlemler.
     /// </summary>  
     public class IsletmeController : ApiController
     {
@@ -72,16 +72,14 @@ namespace RezervasyonSistemi.Controllers
                     {
                         return BadRequest("Isletme ID is not valid");
                     }
-                    updatedIsletme.ID = updatedIsletme.ID;
                     updatedIsletme.IsletmeAciklamasi = isletme.IsletmeAciklamasi;
                     updatedIsletme.IsletmeAdresi = isletme.IsletmeAdresi;
                     updatedIsletme.IsletmeIsmi = isletme.IsletmeIsmi;
                     updatedIsletme.IsletmeKrokiResim = isletme.IsletmeKrokiResim;
                     updatedIsletme.IsletmeNumarasi = isletme.IsletmeNumarasi;
-                    updatedIsletme.KullaniciID = currentUser;
                     db.Entry(updatedIsletme).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
-                    return Ok(isletme);
+                    return Ok(updatedIsletme);
                 }
                 catch (Exception ex)
                 {
@@ -95,7 +93,7 @@ namespace RezervasyonSistemi.Controllers
         }
 
         /// <summary>
-        /// Giriş yapan kullanıcının işletmesini düzenler.
+        /// Giriş yapan kullanıcının işletmesini siler.
         /// </summary>
         [Authorize(Roles = "True")]
         [HttpDelete]

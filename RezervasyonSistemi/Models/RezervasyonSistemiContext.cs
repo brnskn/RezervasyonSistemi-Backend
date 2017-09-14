@@ -20,6 +20,8 @@ namespace RezervasyonSistemi.Models
         public DbSet<KatBilgileri> KatBilgileris { get; set; }
         public DbSet<Kullanicilar> Kullanicilars { get; set; }
         public DbSet<MasaBilgileri> MasaBilgileris { get; set; }
+        public DbSet<PlanDetaylari> PlanDetaylaris { get; set; }
+        public DbSet<Planlar> Planlars { get; set; }
         public DbSet<RezervasyonTalepleri> RezervasyonTalepleris { get; set; }
         public DbSet<sysdiagram> sysdiagrams { get; set; }
 
@@ -29,6 +31,8 @@ namespace RezervasyonSistemi.Models
             modelBuilder.Configurations.Add(new KatBilgileriMap());
             modelBuilder.Configurations.Add(new KullanicilarMap());
             modelBuilder.Configurations.Add(new MasaBilgileriMap());
+            modelBuilder.Configurations.Add(new PlanDetaylariMap());
+            modelBuilder.Configurations.Add(new PlanlarMap());
             modelBuilder.Configurations.Add(new RezervasyonTalepleriMap());
             modelBuilder.Configurations.Add(new sysdiagramMap());
         }

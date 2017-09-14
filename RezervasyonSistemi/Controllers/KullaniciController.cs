@@ -11,7 +11,7 @@ using System.Web.Http;
 namespace RezervasyonSistemi.Controllers
 {
     /// <summary>  
-    ///  Kullanıcının bilgilerini düzenler.
+    ///  Kullanıcının bilgileri ile ilgili işlemler.
     /// </summary>  
     public class KullaniciController : ApiController
     {
@@ -51,7 +51,6 @@ namespace RezervasyonSistemi.Controllers
                     updatedKullanici.Isim = kullanici.Isim;
                     updatedKullanici.Soyisim = kullanici.Soyisim;
                     updatedKullanici.KullaniciAdi = kullanici.KullaniciAdi;
-                    updatedKullanici.KullaniciTipi = kullanici.KullaniciTipi;
                     updatedKullanici.Mail = kullanici.Mail;
                     updatedKullanici.TelefonNumarasi = kullanici.TelefonNumarasi;
                     db.Entry(updatedKullanici).State = System.Data.Entity.EntityState.Modified;

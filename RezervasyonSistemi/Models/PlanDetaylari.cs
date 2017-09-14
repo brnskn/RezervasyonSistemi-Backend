@@ -4,19 +4,20 @@ using System.Collections.Generic;
 
 namespace RezervasyonSistemi.Models
 {
-    public partial class MasaBilgileri
+    public partial class PlanDetaylari
     {
-        public MasaBilgileri()
+        public PlanDetaylari()
         {
             this.RezervasyonTalepleris = new List<RezervasyonTalepleri>();
         }
 
         public int ID { get; set; }
-        public string MasaIsmi { get; set; }
-        public Nullable<int> MasaNumarasi { get; set; }
-        public Nullable<int> KatID { get; set; }
+        public Nullable<int> HaftaninGunu { get; set; }
+        public Nullable<System.DateTime> BaslangicSaati { get; set; }
+        public Nullable<System.DateTime> BitisSaati { get; set; }
+        public Nullable<int> PlanID { get; set; }
         [JsonIgnore]
-        public virtual KatBilgileri KatBilgileri { get; set; }
+        public virtual Planlar Planlar { get; set; }
         [JsonIgnore]
         public virtual ICollection<RezervasyonTalepleri> RezervasyonTalepleris { get; set; }
     }

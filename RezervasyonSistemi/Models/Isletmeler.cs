@@ -9,6 +9,7 @@ namespace RezervasyonSistemi.Models
         public Isletmeler()
         {
             this.KatBilgileris = new List<KatBilgileri>();
+            this.Planlars = new List<Planlar>();
         }
 
         public int ID { get; set; }
@@ -16,12 +17,13 @@ namespace RezervasyonSistemi.Models
         public string IsletmeAdresi { get; set; }
         public string IsletmeAciklamasi { get; set; }
         public string IsletmeNumarasi { get; set; }
-        [JsonIgnore]
         public Nullable<int> KullaniciID { get; set; }
         public string IsletmeKrokiResim { get; set; }
         [JsonIgnore]
         public virtual Kullanicilar Kullanicilar { get; set; }
         [JsonIgnore]
         public virtual ICollection<KatBilgileri> KatBilgileris { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<Planlar> Planlars { get; set; }
     }
 }

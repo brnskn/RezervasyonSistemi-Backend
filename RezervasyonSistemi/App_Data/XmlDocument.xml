@@ -483,7 +483,7 @@
         </member>
         <member name="T:RezervasyonSistemi.Controllers.IsletmeController">
             <summary>  
-             Kullanıcının işletme bilgilerini düzenler.
+             Kullanıcının işletme bilgileri ile ilgili işlemler.
             </summary>  
         </member>
         <member name="M:RezervasyonSistemi.Controllers.IsletmeController.Get">
@@ -503,12 +503,37 @@
         </member>
         <member name="M:RezervasyonSistemi.Controllers.IsletmeController.Delete(System.Int32)">
             <summary>
-            Giriş yapan kullanıcının işletmesini düzenler.
+            Giriş yapan kullanıcının işletmesini siler.
+            </summary>
+        </member>
+        <member name="T:RezervasyonSistemi.Controllers.KatBilgileriController">
+            <summary>  
+             İşletmenin kat bilgileri ile ilgili işlemler.
+            </summary>  
+        </member>
+        <member name="M:RezervasyonSistemi.Controllers.KatBilgileriController.Get(System.Int32)">
+            <summary>
+            İşletmenin kat bilgilerini getirir.
+            </summary>
+        </member>
+        <member name="M:RezervasyonSistemi.Controllers.KatBilgileriController.Post(RezervasyonSistemi.Models.KatBilgileri)">
+            <summary>
+            İşletme için yeni bir kat bilgisi ekler.
+            </summary>
+        </member>
+        <member name="M:RezervasyonSistemi.Controllers.KatBilgileriController.Put(RezervasyonSistemi.Models.KatBilgileri)">
+            <summary>
+            İşletme için eklenen bir kat bilgisi düzenler.
+            </summary>
+        </member>
+        <member name="M:RezervasyonSistemi.Controllers.KatBilgileriController.Delete(System.Int32)">
+            <summary>
+            İşletme için eklenen bir kat bilgisini siler.
             </summary>
         </member>
         <member name="T:RezervasyonSistemi.Controllers.KullaniciController">
             <summary>  
-             Kullanıcının bilgilerini düzenler.
+             Kullanıcının bilgileri ile ilgili işlemler.
             </summary>  
         </member>
         <member name="M:RezervasyonSistemi.Controllers.KullaniciController.Get">
@@ -520,6 +545,106 @@
         <member name="M:RezervasyonSistemi.Controllers.KullaniciController.Put(RezervasyonSistemi.Models.Kullanicilar)">
             <summary>
             Giriş yapan kullanıcının işletmesini düzenler.
+            </summary>
+        </member>
+        <member name="T:RezervasyonSistemi.Controllers.MasaBilgileriController">
+            <summary>  
+             İşletmenin masa bilgileri ile ilgili işlemler.
+            </summary>  
+        </member>
+        <member name="M:RezervasyonSistemi.Controllers.MasaBilgileriController.Get(System.Int32)">
+            <summary>
+            İlgili kat bilgisine göre masa bilgilerini getirir.
+            </summary>
+        </member>
+        <member name="M:RezervasyonSistemi.Controllers.MasaBilgileriController.Post(RezervasyonSistemi.Models.MasaBilgileri)">
+            <summary>
+            İlgili kat bilgisine göre masa bilgisi ekler.
+            </summary>
+        </member>
+        <member name="M:RezervasyonSistemi.Controllers.MasaBilgileriController.Put(RezervasyonSistemi.Models.MasaBilgileri)">
+            <summary>
+            İlgili kat bilgisine göre masa bilgisini düzenler.
+            </summary>
+        </member>
+        <member name="M:RezervasyonSistemi.Controllers.MasaBilgileriController.Delete(System.Int32)">
+            <summary>
+            İlgili kat bilgisine göre masa bilgisini siler.
+            </summary>
+        </member>
+        <member name="T:RezervasyonSistemi.Controllers.PlanController">
+            <summary>  
+             İşletmenin plan bilgileri ile ilgili işlemler.
+            </summary>  
+        </member>
+        <member name="M:RezervasyonSistemi.Controllers.PlanController.Get(System.Int32)">
+            <summary>
+            İşletmenin plan bilgilerini getirir.
+            </summary>
+        </member>
+        <member name="M:RezervasyonSistemi.Controllers.PlanController.Post(RezervasyonSistemi.Models.Planlar)">
+            <summary>
+            İşletme için yeni bir plan bilgisi ekler.
+            </summary>
+        </member>
+        <member name="M:RezervasyonSistemi.Controllers.PlanController.Put(RezervasyonSistemi.Models.Planlar)">
+            <summary>
+            İşletme için eklenen bir plan bilgisi düzenler.
+            </summary>
+        </member>
+        <member name="M:RezervasyonSistemi.Controllers.PlanController.Delete(System.Int32)">
+            <summary>
+            İşletme için eklenen bir plan bilgisini siler.
+            </summary>
+        </member>
+        <member name="T:RezervasyonSistemi.Controllers.PlanDetaylariController">
+            <summary>  
+             İşletmenin plan detay bilgileri ile ilgili işlemler.
+            </summary>  
+        </member>
+        <member name="M:RezervasyonSistemi.Controllers.PlanDetaylariController.Get(System.Int32)">
+            <summary>
+            İşletmenin plan detay bilgilerini getirir.
+            </summary>
+        </member>
+        <member name="M:RezervasyonSistemi.Controllers.PlanDetaylariController.Post(RezervasyonSistemi.Models.PlanDetaylari)">
+            <summary>
+            İşletme için yeni bir plan detay bilgisi ekler.
+            </summary>
+        </member>
+        <member name="M:RezervasyonSistemi.Controllers.PlanDetaylariController.Put(RezervasyonSistemi.Models.PlanDetaylari)">
+            <summary>
+            İşletme için eklenen bir plan detay bilgisi düzenler.
+            </summary>
+        </member>
+        <member name="M:RezervasyonSistemi.Controllers.PlanDetaylariController.Delete(System.Int32)">
+            <summary>
+            İşletme için eklenen bir plan detay bilgisini siler.
+            </summary>
+        </member>
+        <member name="T:RezervasyonSistemi.Controllers.RezervasyonTalepleriController">
+            <summary>  
+             İşletmenin rezervasyon işlemleri.
+            </summary>  
+        </member>
+        <member name="M:RezervasyonSistemi.Controllers.RezervasyonTalepleriController.Get(System.Int32)">
+            <summary>
+            İşletmenin rezervasyon bilgilerini getirir.
+            </summary>
+        </member>
+        <member name="M:RezervasyonSistemi.Controllers.RezervasyonTalepleriController.Get(System.Int32,System.Int32)">
+            <summary>
+            İşletmenin rezervasyon bilgilerini masaya göre getirir.
+            </summary>
+        </member>
+        <member name="M:RezervasyonSistemi.Controllers.RezervasyonTalepleriController.Put(RezervasyonSistemi.Models.RezervasyonTalepleri)">
+            <summary>
+            İşletmenin rezervasyon bilgilerini onaylar.
+            </summary>
+        </member>
+        <member name="M:RezervasyonSistemi.Controllers.RezervasyonTalepleriController.Delete(System.Int32)">
+            <summary>
+            İşletmenin rezervasyon bilgilerini siler.
             </summary>
         </member>
     </members>
